@@ -7,13 +7,13 @@ def cargar_datos():
             for line in file:
                 nombre, precio, cantidad = line.strip().split(',')
                 producto = {
-                    "nombre": nombre,
-                    "precio": float(precio),
-                    "cantidad": int(cantidad)
+                    "nombre": nombre, #nombre producto
+                    "precio": float(precio), # precio tipo float numeros reales
+                    "cantidad": int(cantidad) # siosi entera
                 }
                 productos.append(producto)
     except FileNotFoundError:
-        pass  # Si el archivo no existe, no hacemos nada
+        pass  # si el archivo no exite no se puede hacer nada
 
 def guardar_datos():
     
